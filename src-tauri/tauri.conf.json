@@ -22,8 +22,8 @@
             "identifier": "sh.des.threepole",
             "shortDescription": " A minimal timer / tracker for Destiny 2",
             "targets": [
-                "msi",
-                "updater"
+                "msi"
+                
             ],
             "windows": {
                 "certificateThumbprint": null,
@@ -36,14 +36,7 @@
         },
         "systemTray": {
             "iconPath": "./icons/icon.ico"
-        },
-        "updater": {
-            "active": true,
-            "endpoints": [
-                "https://gist.githubusercontent.com/dessh/db900ce1c2499096ddc4053707183c3d/raw"
-            ],
-            "dialog": true,
-            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEYyRkNGNDMwMUI0OUFDQ0IKUldUTHJFa2JNUFQ4OG5ib1hPdnNEcDdzbXJhWmRtWVFxenRFU0ZYOTc0V1RXbS9FU0dhWW9HZDMK"
         }
+        
     }
 }

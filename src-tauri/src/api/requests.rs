@@ -7,7 +7,7 @@ use reqwest::{Client, Method, RequestBuilder};
 use serde::Deserialize;
 use serde_json::{json, Value};
 
-use crate::consts::{API_KEY, API_PATH};
+use crate::consts::{API_KEY, API_PATH, USER_AGENT};
 
 pub enum BungieRequest<'a> {
     SearchDestinyPlayerByBungieName {
@@ -86,6 +86,7 @@ fn api_request(path: &str, method: Method) -> RequestBuilder {
     Client::new()
         .request(method, format!("{API_PATH}{path}"))
         .header("X-API-Key", API_KEY)
+        .header("user-agent", USER_AGENT)
 }
 
 pub async fn make_request(req: BungieRequest<'_>) -> Result<Value, BungieResponseError> {
